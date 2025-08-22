@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jem Gems Budget Tracking App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Jems💎 Budget Tracking App</h1>
+      <div class="month-display">
+        <span id="current-month">August 2025</span>
+      </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+      <div class="card">
+        <h3>Monthly Income</h3>
+        <input type="number" id="income" placeholder="Enter income (₦)">
+        <button id="set-income">Set Income</button>
+      </div>
+      <div class="card">
+        <h3>Total Expenses</h3>
+        <p>₦<span id="total-expenses">0</span></p>
+      </div>
+      <div class="card">
+        <h3>Balance</h3>
+        <p>₦<span id="balance">0</span></p>
+      </div>
+    </section>
+
+    <!-- Add Transaction -->
+    <section class="add-transaction">
+      <h2>Add Expense</h2>
+      <form id="transaction-form">
+        <input type="text" id="category" placeholder="Category (e.g., Food, Rent)" required>
+        <input type="number" id="amount" placeholder="Amount (₦)" required>
+        <input type="date" id="date" required>
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Transaction List -->
+    <section class="transactions">
+      <h2>Transactions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>💎Date</th>
+            <th>💎Category</th>
+            <th>💎Amount</th>
+            <th>💎Actions</th>
+          </tr>
+        </thead>
+        <tbody id="transactions">
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Category Summary -->
+    <section class="category-summary">
+      <h2>Expenses by Category</h2>
+      <ul id="category-summary-list"></ul>
+    </section>
+  </div>
+
+  <!-- Notification -->
+  <div id="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
